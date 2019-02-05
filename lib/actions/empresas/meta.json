@@ -1,0 +1,166 @@
+{
+  "name": {
+    "pt_BR": "Empresa",
+    "en": "Customer"
+  },
+  "description": {
+    "pt_BR": "Cadastro de Empresas",
+    "en": "Customers"
+  },
+  "action_fields": {
+    "fields": [
+      {
+        "key": "id"
+      },
+      {
+        "key": "nome",
+        "name": { "pt_BR": "Nome ou razão social da empresa.", "en": "Name" },
+        "description": {"pt_BR": "Nome ou razão social da empresa que será criado no BaseERP","en": "The customer name"},
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 250
+      },
+      {
+        "key": "fantasia",
+        "name": { "pt_BR": "Nome fantasia", "en": "Fantasy" },
+        "description": {"pt_BR": "Nome fantasia da empresa","en": "The customer nickname"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 250
+      },
+      {
+        "key" : "tipoPessoa",
+        "label": { "pt_BR": "Tipo da pessoa", "en": "Person type" },
+        "description": {"pt_BR": "Este campo irá definir qual tipo de pessoa será cadastrado no BaseERP","en": "The type of contact"},
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "dropdown",
+        "data_type": "string",
+        "list": {
+          "type" : "local",
+          "data": [
+            {"label": "Pessoa física", "value": "1"},
+            {"label": "Pessoa jurídica", "value": "0"}
+          ]
+        }
+      },
+      {
+        "key": "cpf_cnpj",
+        "name": { "pt_BR": "CPF/CNPJ do contato", "en": "CPF or CNPJ" },
+        "description": {"pt_BR": "Insira o número do documento (CPF/CNPJ) do seu cliente. Este número pode ser o CNPJ (em caso de pessoa jurídica) ou CNPJ (em caso de pessoa física). Ele é importante para a emissão de NFs","en": "The CPF or CNPJ of contact"},
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 18
+      },
+      {
+        "key": "ie_rg",
+        "name": { "pt_BR": "RG ou inscrição estadual", "en": "RG or state registration" },
+        "description": {"pt_BR": "O RG ou Inscrição Estadual (IE) do contato que será cadastro no BaseERP","en": "The RG or state registration of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 18
+      },
+      {
+        "key": "cep",
+        "name": { "pt_BR": "CEP do endereço", "en": "CEP address" },
+        "description": {"pt_BR": "O cep do endereço do contato","en": "The cep address of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 10
+      },      
+      {
+        "key": "endereco",
+        "name": { "pt_BR": "Rua do endereço", "en": "Street address" },
+        "description": {"pt_BR": "A rua do endereço do contato","en": "The street address of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 250
+      },
+      {
+        "key": "numero",
+        "name": { "pt_BR": "Número do endereço", "en": "Number address" },
+        "description": {"pt_BR": "O número do endereço do contato","en": "The number address of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 10
+      },
+      {
+        "key": "complemento",
+        "name": { "pt_BR": "Complemento do endereço", "en": "Complement address" },
+        "description": {"pt_BR": "O complemento do endereço do contato","en": "The complement address of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 250
+      },
+      {
+        "key": "bairro",
+        "name": { "pt_BR": "Bairro do endereço", "en": "Neighborhood address" },
+        "description": {"pt_BR": "O bairro do endereço do contato","en": "The neighborhood address of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 250
+      },
+
+      {
+        "key": "cidade",
+        "name": { "pt_BR": "Cidade do endereço", "en": "City address" },
+        "description": {"pt_BR": "A cidade do endereço do contato","en": "The city address of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 250
+      },
+      {
+        "key": "uf",
+        "name": { "pt_BR": "UF do endereço", "en": "UF address" },
+        "description": {"pt_BR": "A UF do endereço do contato","en": "The UF address of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 2
+      },
+      {
+        "key": "fone",
+        "name": { "pt_BR": "Telefone", "en": "Telephone" },
+        "description": {"pt_BR": "O telefone do contato","en": "The telephone of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 20
+      },
+      {
+        "key": "celular",
+        "name": { "pt_BR": "Celular", "en": "Cellphone" },
+        "description": {"pt_BR": "O celular do contato","en": "The cellphone of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 20
+      },
+      {
+        "key": "email",
+        "name": { "pt_BR": "E-mail do contato", "en": "E-mail" },
+        "description": {"pt_BR": "E-mail do contato que será cadastro no Bling","en": "The e-mail of the contact"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string",
+        "max": 250
+      }
+    ]
+  }
+}

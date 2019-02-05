@@ -3,37 +3,29 @@
   "name": "Base ERP",
   "color": "#000000",
   "description": {
-    "pt_BR": "My awesome app description!",
-    "en": "My awesome app description!"
+    "pt_BR": "Base ERP!",
+    "en": "Base ERP!"
   },
-  "website": "https://example.com",
-  "signup_url": "https://example.com/signup",
+  "website": "https://www.baseerp.com.br",
+  "signup_url": "https://apps.baseerp.com.br",
   "api_base_uri": {
     "production": {
-      "uri": "https://api.example.com",
+      "uri": "https://api.baseerp.com.br",
       "label": "Produção",
       "default": true
     }
   },
   "authentication": {
-    "type": "basic_auth",
+    "type": "pass_through_query_string",
     "fields": [
       {
-        "name": "api_key",
-        "label": "API key",
-        "mapping": "username",
+        "name": "token",
+        "label": "Token",
         "type": "text"
-      },
-      {
-        "name": "api_secret",
-        "label": "API secret",
-        "mapping": "password",
-        "type": "password"
       }
     ],
     "ping_request": {
-      "method": "/ping",
-      "params": { "limit": 1 }
+      "method_name": "/ping"
     }
   }
 }
