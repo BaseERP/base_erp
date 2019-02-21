@@ -1,10 +1,10 @@
 {
   "name": {
-    "pt_BR": "Empresa",
+    "pt_BR": "Clientes",
     "en": "Customer"
   },
   "description": {
-    "pt_BR": "Cadastro de Empresas",
+    "pt_BR": "Cadastro de Clientes",
     "en": "Customers"
   },
   "action_fields": {
@@ -52,7 +52,7 @@
         }
       },
       {
-        "key": "cpf_cnpj",
+        "key": "cpfCnpj",
         "name": { "pt_BR": "CPF/CNPJ do contato", "en": "CPF or CNPJ" },
         "description": {"pt_BR": "Insira o número do documento (CPF/CNPJ) do seu cliente. Este número pode ser o CNPJ (em caso de pessoa jurídica) ou CNPJ (em caso de pessoa física). Ele é importante para a emissão de NFs","en": "The CPF or CNPJ of contact"},
         "required": true,
@@ -62,13 +62,62 @@
         "max": 18
       },
       {
-        "key": "ie_rg",
+        "key": "ieRg",
         "name": { "pt_BR": "RG ou inscrição estadual", "en": "RG or state registration" },
         "description": {"pt_BR": "O RG ou Inscrição Estadual (IE) do contato que será cadastro no BaseERP","en": "The RG or state registration of the contact"},
         "visible": true,
         "field_type": "custom",
         "data_type": "string",
         "max": 18
+      },
+      {
+        "key": "tipoContribuinte",
+        "name": { "pt_BR": "indicador de tipo de contribuinte", "en": "state registration type" },
+        "description": {
+          "pt_BR": "O tipo de indicador de inscrição estadual do cliente",
+          "en": "The state registration type of the customer"
+        },
+        "label": {
+          "pt_BR": "indicador de tipo de contribuinte",
+          "en": "state registration type"
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "required": false,
+        "visible": true,
+        "advanced": true,
+        "field_type": "dropdown",
+        "data_type": "string",
+        "list": {
+          "type" : "local",
+          "data": [
+            {"label": "Contribuinte", "value": "1"},
+            {"label": "Contribuinte isento", "value": "2"},
+            {"label": "Não contribuinte", "value": "9"}
+          ]
+        }
+      },
+      {
+        "key" : "optanteSimples",
+        "label": { "pt_BR": "Optante Simples", "en": "Optante Simples" },
+        "description": {"pt_BR": "Este campo irá definir se a empresa é optante do simples nacional","en": "The type of contact"},
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "dropdown",
+        "data_type": "string",
+        "list": {
+          "type" : "local",
+          "data": [
+            {"label": "Sim", "value": "1"},
+            {"label": "Não", "value": "0"}
+          ]
+        }
       },
       {
         "key": "cep",
@@ -160,6 +209,16 @@
         "field_type": "custom",
         "data_type": "string",
         "max": 250
+      },
+      {
+        "key": "observacoes",
+        "name": {"pt_BR": "Observações", "en": "notes"},
+        "description": {"pt_BR": "Observações", "en": "Notes"},
+        "required": false,
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom_textarea",
+        "data_type": "text"
       }
     ]
   }
